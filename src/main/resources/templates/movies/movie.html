@@ -60,7 +60,7 @@
                                                                                     description=${el.description},
                                                                                     studioEntity=${el.studioEntity.id},
                                                                                     videoTrailerLink=${el.videoTrailerLink})}">Змінити</a>
-                    <a sec:authorize="hasRole('ADMIN')" th:href="@{/movie/details(id=${el.id},
+                    <a sec:authorize="isAuthenticated()" th:href="@{/movie/details(id=${el.id},
                                                       name=${el.name},
                                                       rating=${el.rating},
                                                       description=${el.description},

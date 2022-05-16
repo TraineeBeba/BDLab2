@@ -44,6 +44,7 @@ public class MovieShowDataExcelExporter {
         createCell(row, 6, "HALL", style);
         createCell(row, 7, "PLACES_COUNT", style);
         createCell(row, 8, "MIN_PRICE", style);
+        createCell(row, 9, "LINK", style);
 
     }
 
@@ -85,6 +86,7 @@ public class MovieShowDataExcelExporter {
             createCell(row, columnCount++, movieShowEntity.getCinemaHallEntity().getNumber(), style);
             createCell(row, columnCount++, movieShowEntity.getCinemaHallEntity().getPlacesCount(), style);
             createCell(row, columnCount++, movieShowEntity.getMinPrice(), style);
+            createCell(row, columnCount++, movieShowEntity.getLink(), style);
         }
     }
 

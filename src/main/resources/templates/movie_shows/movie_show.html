@@ -60,7 +60,7 @@
                 <td class="col-1" th:text="${el.minPrice}"></td>
                 <td class="pupa href-container col-3">
                     <a sec:authorize="!isAuthenticated()" class="nav-link" href="/login">Треба авторизуватися ¯\_(ツ)_/¯</a>
-                    <a sec:authorize="hasRole('ADMIN')" th:href="@{{link}(link=${el.link})}"
+                    <a sec:authorize="isAuthenticated()" th:href="@{{link}(link=${el.link})}"
                         th:target="_blank">Див. на сайті</a>
                     <a sec:authorize="hasRole('ADMIN')" th:href="@{/movie-show/edit(id=${el.id},
                                             movieEntity=${el.movieEntity.id},

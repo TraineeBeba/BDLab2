@@ -50,7 +50,7 @@
                     <a sec:authorize="hasRole('ADMIN')" th:href="@{/cinema/edit(id=${el.id},
                                                                     name=${el.name},
                                                                     address=${el.address})}">Змінити</a>
-                    <a sec:authorize="hasRole('ADMIN')" th:href="@{/cinema/details(id=${el.id},
+                    <a sec:authorize="isAuthenticated()" th:href="@{/cinema/details(id=${el.id},
                                                                                    name=${el.name},
                                                                                    address=${el.address})}">Детальніше</a>
                     <a sec:authorize="hasRole('ADMIN')" th:href="@{/cinema/delete(id=${el.id},

@@ -47,7 +47,7 @@
                     <a sec:authorize="!isAuthenticated()" class="nav-link" href="/login">Треба авторизуватися ¯\_(ツ)_/¯</a>
                     <a sec:authorize="hasRole('ADMIN')" th:href="@{/studio/edit(id=${el.id},
                                                                                 name=${el.name})}">Змінити</a>
-                    <a sec:authorize="hasRole('ADMIN')" th:href="@{/studio/details(id=${el.id},
+                    <a sec:authorize="isAuthenticated()" th:href="@{/studio/details(id=${el.id},
                                                   name=${el.name})}">Детальніше</a>
                     <a sec:authorize="hasRole('ADMIN')" th:href="@{/studio/delete(id=${el.id},
                                                                                   name=${el.name})}">Видалити</a>

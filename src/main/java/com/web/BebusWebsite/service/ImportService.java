@@ -13,7 +13,7 @@ import java.io.IOException;
 @Service
 public class ImportService {
     private final int CINEMA_COLUMNS = 3;
-    private final int MOVIE_SHOW_COLUMNS = 9;
+    private final int MOVIE_SHOW_COLUMNS = 10;
     private final int MOVIE_COLUMNS = 6;
     private final int HALL_COLUMNS = 5;
     private final int STUDIO_COLUMNS = 2;
@@ -212,7 +212,7 @@ public class ImportService {
             CinemaHallEntity cinemaHallEntity = cinemaHallService.getCinemaHallRepo().findCinemaHallEntityByCinemaEntityAndNumber(cinemaEntity, (int) row.getCell(6).getNumericCellValue());
 
 
-            movieShowEntity.setLink(row.getCell(5).getStringCellValue());
+            movieShowEntity.setLink(row.getCell(9).getStringCellValue());
             movieShowEntity.setMovieEntity(movieEntity);
             movieShowEntity.setCinemaEntity(cinemaEntity);
             movieShowEntity.setCinemaHallEntity(cinemaHallEntity);

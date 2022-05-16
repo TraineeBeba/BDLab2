@@ -52,7 +52,7 @@
                                                                               number=${el.number},
                                                                               placesCount=${el.placesCount},
                                                                               cinemaEntity=${el.cinemaEntity.id})}">Змінити</a>
-                    <a sec:authorize="hasRole('ADMIN')" th:href="@{/hall/details(id=${el.id},
+                    <a sec:authorize="isAuthenticated()" th:href="@{/hall/details(id=${el.id},
                                                       number=${el.number},
                                                       placesCount=${el.placesCount},
                                                       cinemaEntity=${el.cinemaEntity.id})}">Детальніше</a>
